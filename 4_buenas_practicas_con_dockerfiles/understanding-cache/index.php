@@ -1,3 +1,3 @@
 <?php
 
-$greeting = "Hello CodelyTv!";
+$greeting = "Hello Codely!";
