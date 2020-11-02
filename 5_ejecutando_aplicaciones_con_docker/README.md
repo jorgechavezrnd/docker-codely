@@ -20,3 +20,9 @@ docker run --rm -it -p 8000:80 my-php-application
 ```
 
 - IMPORTANT: if we want to map a port lower than 1024, we will need to be root
+
+# Restart failed containers automatically
+```
+docker run -it --restart=always -p 8000:80 my-php-application
+```
+- This container will execute EVER, if we restart the docker service, the container will start automatically, others values for "--restart" flag: https://docs.docker.com/engine/reference/run/#restart-policies---restart
