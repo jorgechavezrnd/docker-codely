@@ -1,0 +1,15 @@
+{
+    "name": "jorge/multi-stage",
+    "description": "Example for docker compose",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jorgechavezrnd",
+            "email": "jorgechavezrnd@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "3.0"
+    }
+}
