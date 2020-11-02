@@ -26,3 +26,11 @@ docker run --rm -it -p 8000:80 my-php-application
 docker run -it --restart=always -p 8000:80 my-php-application
 ```
 - This container will execute EVER, if we restart the docker service, the container will start automatically, others values for "--restart" flag: https://docs.docker.com/engine/reference/run/#restart-policies---restart
+
+# limit CPU and memory
+```
+docker run -it --cpus=1.5 --memory=500m --restart=always -p 8000:80 my-php-application
+```
+- With "--memory" flag we specify the limit for the memory, if we exceed the limit, the docker servie will kill this container, if we configure the "--restart" flag, the docker service will restart the container, depending of "--restart" value
+- With "--cpus" flag we configure the number of CPUs
+- With "--cpu-shared" flag we specify the CPU shares (relative weight), this only applies when we have a shortage of CPUs
