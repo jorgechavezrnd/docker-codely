@@ -34,3 +34,15 @@ docker run -it --cpus=1.5 --memory=500m --restart=always -p 8000:80 my-php-appli
 - With "--memory" flag we specify the limit for the memory, if we exceed the limit, the docker servie will kill this container, if we configure the "--restart" flag, the docker service will restart the container, depending of "--restart" value
 - With "--cpus" flag we configure the number of CPUs
 - With "--cpu-shared" flag we specify the CPU shares (relative weight), this only applies when we have a shortage of CPUs
+
+# Persist data with volumes
+```
+docker run -it --name vol-test -v codely-volume:/data ubuntu
+```
+
+```
+docker run -it -p 8000:80 -v $PWD:/var/www/html php:7.2-apache
+```
+- We create a container for serve the php app, and we can modify the code and view the changes in real time.
+
+- In Dockerfile, we can use the "VOLUME" keword for specify the volume
